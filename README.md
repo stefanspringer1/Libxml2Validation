@@ -19,6 +19,8 @@ The current state is:
 
 Of course, many more options could be added.
 
+The binaries for some platforms are added in the subdirectory `Binaries`.
+
 Current command line interface:
 
 arguments: `<document> [-catalog=<catalog>] [-debug]`
