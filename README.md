@@ -20,7 +20,7 @@ The binaries for some platforms are added in the subdirectory `Binaries`.
 
 The current state is:
 
-- Allow the validation of an XML document by its DTD using the system id.
+- Allow the validation of an XML document by its DTD using the system ID.
 - Alternatively use an (XML-)catalog top resolve the DTD and other entities.
 
 Of course, many more options could be added.
