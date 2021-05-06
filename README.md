@@ -35,6 +35,4 @@ arguments: `<document> [-catalog=<catalog>] [-debug]`
 
 See the [Libxml2 XmlTextReader Interface tutorial](http://xmlsoft.org/xmlreader.html) and [Catalog support](http://xmlsoft.org/catalog.html) for more information. Note that the libxml2 itself has a command line tool [xmllint](http://xmlsoft.org/xmllint.html).
 
----
-
 libxml2 is maintained at [xmlsoft.org](http://www.xmlsoft.org) and can be used under the [MIT License](https://opensource.org/licenses/mit-license.html).
