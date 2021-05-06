@@ -31,6 +31,8 @@ arguments: `<document> [-catalog=<catalog>] [-debug]`
 
 `-debug` outputs some information e.g. about the catalog operations. Without the `-debug` argument (and if a path to an XML document is provided), the program outputs nothing. Errors are written to stderr.
 
+## References
+
 See the [Libxml2 XmlTextReader Interface tutorial](http://xmlsoft.org/xmlreader.html) and [Catalog support](http://xmlsoft.org/catalog.html) for more information. Note that the libxml2 itself has a command line tool [xmllint](http://xmlsoft.org/xmllint.html).
 
 ---
