@@ -14,7 +14,7 @@ Note that you might have to out-comment `set(CMAKE_EXE_LINKER_FLAGS -lxml2)` in 
 
 Note that newer `xmlReader` from is used here and not the SAX interface, since in libxml2 validation is only possible either by using `xmlReader` or by building the DOM tree.
 
-# The Resulting Program
+## The Resulting Program
 
 The binaries for some platforms are added in the subdirectory `Binaries`.
 
