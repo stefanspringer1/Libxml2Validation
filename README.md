@@ -1,5 +1,7 @@
 # Libxml2Validation
 
+## About This Project
+
 This is a (very) little C project for the validation of XML documents using libxml2. The resulting executable is to executed from the command line, but the code can easily be adjusted for other use cases.
 
 There is currently only the one source file `main.c` in this repository, with is adapted from the XmlTextReader example of the libxml2 distribution (even most of the comments are retained, which might not be completely correct any more for the current use case).
@@ -12,14 +14,16 @@ Note that you might have to out-comment `set(CMAKE_EXE_LINKER_FLAGS -lxml2)` in 
 
 Note that newer `xmlReader` from is used here and not the SAX interface, since in libxml2 validation is only possible either by using `xmlReader` or by building the DOM tree.
 
+# The Resulting Program
+
+The binaries for some platforms are added in the subdirectory `Binaries`.
+
 The current state is:
 
 - Allow the validation of an XML document by its DTD using the system id.
 - Alternatively use an (XML-)catalog top resolve the DTD and other entities.
 
 Of course, many more options could be added.
-
-The binaries for some platforms are added in the subdirectory `Binaries`.
 
 Current command line interface:
 
