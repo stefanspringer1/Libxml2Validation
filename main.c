@@ -18,6 +18,8 @@
 
 #ifdef LIBXML_READER_ENABLED
 
+int debug = 0;
+
 /**
  * processNode:
  * @reader: the xmlReader
@@ -108,7 +110,11 @@ int setenv(const char *name, const char *value, int overwrite)
         errcode = getenv_s(&envsize, NULL, 0, name);
         if(errcode || envsize) return errcode;
     }
-    return _putenv_s(name, value);
+    int retCode = _putenv_s(name, value);
+    if (debug) {
+        printf("[%s=%s]\n", name, getenv(name));
+    }
+    return retCode;
 }
 
 int unsetenv(const char *name)
@@ -121,7 +127,6 @@ int main(int argc, char **argv) {
 
     char* doc = NULL;
     char* catalog = NULL;
-    int debug = 0;
 
     for (int i=1; i<argc; i++) {
         char* arg = argv[i];
@@ -157,7 +162,7 @@ int main(int argc, char **argv) {
     if (catalog != NULL) {
         if (debug) {
             printf("catalog: [%s]\n", catalog);
-            setenv("XML_DEBUG_CATALOG", "", 1);
+            setenv("XML_DEBUG_CATALOG", "YES", 1);
         }
         std:setenv("XML_CATALOG_FILES", catalog, 1);
     }
