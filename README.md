@@ -14,7 +14,7 @@ Note that newer `xmlReader` from is used here and not the SAX interface, since i
 
 The `CMakeLists.txt` contains some conditional statements according to the operating system used:
 
-- On macOS, libxml2 is already available, you even do not need the headers files that come with this project on macOS. But the linker is to be called with `-lxml2`.
+- On macOS, libxml2 is already available, and you even do not need the headers files that come with this project. But the linker is to be called with `-lxml2`.
 - On Windows, you _do_ need the header files and, of course, the libraries.
 
 ## The Resulting Program
