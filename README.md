@@ -45,6 +45,10 @@ Note that **on Windows, you have to set the environment variables `XML_CATALOG_F
 
 Also note that it might not be necessary to have all the libraries that you currently find in `Binaries/Windows.Intel`.
 
+## Paths Containing Non-ASCII Characters
+
+We currently do not know what happens with paths containing non-ASCII characters. We suspect that they might not work.
+
 ## References
 
 See the [Libxml2 XmlTextReader Interface tutorial](http://xmlsoft.org/xmlreader.html) and [Catalog support](http://xmlsoft.org/catalog.html) for more information. Note that the libxml2 itself has a command line tool [xmllint](http://xmlsoft.org/xmllint.html).
