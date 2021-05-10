@@ -35,6 +35,12 @@ arguments: `<document> [-catalog=<catalog>] [-debug]`
 
 e.g. `[ENCODING=us-ascii]`. Errors are written to stderr.
 
+## On Referencing Catalog files
+
+Instead of giving the `-catalog=...` argument, you can also set the environment variable `XML_CATALOG_FILES` to a list of paths to (XML-)catalog files, and to set the debug mode for the catalog processing (for outputting information about the resolution of those files) you can set the environment variable `XML_DEBUG_CATALOG` (the value does not matter). This is just what the program itself will do depending on the arguments `-catalog=...` and `-debug`.
+
+Note that **on Windows, you have to set those environment variables yourself before calling the program** (of course, you then do not need to set the according program arguments).
+
 ## References
 
 See the [Libxml2 XmlTextReader Interface tutorial](http://xmlsoft.org/xmlreader.html) and [Catalog support](http://xmlsoft.org/catalog.html) for more information. Note that the libxml2 itself has a command line tool [xmllint](http://xmlsoft.org/xmllint.html).
