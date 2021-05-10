@@ -8,10 +8,6 @@ There is currently only the one source file `main.c` in this repository, with is
 
 For this project to be built, the library should be available on the system.
 
-Windows: Download the binary from http://www.xmlsoft.org. Such a download should also contain the header files. Add those headers in a subdirectory `libxml` of the project and in-comment the line with `target_include_directories` in `CMakeLists.txt`. You might register the libxml2-DLL via `regsvr32` (but there mightj be better options).
-
-Note that you might have to out-comment `set(CMAKE_EXE_LINKER_FLAGS -lxml2)` in `CMakeLists.txt`.
-
 Note that newer `xmlReader` from is used here and not the SAX interface, since in libxml2 validation is only possible either by using `xmlReader` or by building the DOM tree.
 
 ## The Resulting Program
