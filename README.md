@@ -29,7 +29,11 @@ Current command line interface:
 
 arguments: `<document> [-catalog=<catalog>] [-debug]`
 
-`-debug` outputs some information e.g. about the catalog operations. Without the `-debug` argument (and if a path to an XML document is provided), the program outputs nothing. Errors are written to stderr.
+`-debug` outputs some information e.g. about the catalog operations. Without the `-debug` argument (and if a path to an XML document is provided), the program only outputs the encoding in the form
+
+`[ENCODING=<encoding>]`
+
+e.g. `[ENCODING=us-ascii]`. Errors are written to stderr.
 
 ## References
 
