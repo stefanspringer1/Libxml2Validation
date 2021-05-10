@@ -153,15 +153,16 @@ int main(int argc, char **argv) {
         if (debug) {
             printf("catalog: [%s]\n", catalog);
             setenv("XML_DEBUG_CATALOG", "YES", 1);
-            printf("[XML_DEBUG_CATALOG=%s]\n", getenv("XML_DEBUG_CATALOG"));
         }
         setenv("XML_CATALOG_FILES", catalog, 1);
-        if (debug) {
-            printf("[XML_CATALOG_FILES=%s]\n", getenv("XML_CATALOG_FILES"));
-        }
     }
     else {
         unsetenv("XML_CATALOG_FILES");
+    }
+
+    if (debug) {
+        printf("[XML_DEBUG_CATALOG=%s]\n", getenv("XML_DEBUG_CATALOG"));
+        printf("[XML_CATALOG_FILES=%s]\n", getenv("XML_CATALOG_FILES"));
     }
 
     streamFile(doc);
