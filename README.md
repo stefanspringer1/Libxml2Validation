@@ -10,6 +10,13 @@ For this project to be built, the library should be available on the system.
 
 Note that newer `xmlReader` from is used here and not the SAX interface, since in libxml2 validation is only possible either by using `xmlReader` or by building the DOM tree.
 
+## Compiling
+
+The `CMakeLists.txt` contains some conditional statements according to the operating system used:
+
+- On macOS, libxml2 is already available, you even do not need the headers files that come with this project on macOS. But the linker is to be called with `-lxml2`.
+- On Windows, you _do_ need the header files and, of course, the libraries.
+
 ## The Resulting Program
 
 The binaries for some platforms are added in the subdirectory `Binaries`.
