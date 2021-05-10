@@ -82,6 +82,7 @@ streamFile(const char *filename) {
         if (xmlTextReaderIsValid(reader) != 1) {
             fprintf(stderr, "Document %s does not validate\n", filename);
         }
+        printf("[ENCODING=%s]\n",xmlTextReaderConstEncoding(reader));
         xmlFreeTextReader(reader);
         if (ret != 0) {
             fprintf(stderr, "%s : failed to parse\n", filename);
