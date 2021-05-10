@@ -41,7 +41,7 @@ Instead of giving the `-catalog=...` argument, you can also set the environment 
 
 ## Running On Windows
 
-Note that **on Windows, you have to set the environment variables `XML_CATALOG_FILES` and `XML_DEBUG_CATALOG` yourself before calling the program** (of course, you then do not need to set the according program arguments).
+Note that **on Windows, you have to set the environment variables `XML_CATALOG_FILES` and `XML_DEBUG_CATALOG` yourself before calling the program** (of course, you then do not need to set the according program arguments). To set `XML_DEBUG_CATALOG`, use a non-empty value (e.g. `YES`).
 
 Also note that it might not be necessary to have all the libraries that you currently find in `Binaries/Windows.Intel`.
 
