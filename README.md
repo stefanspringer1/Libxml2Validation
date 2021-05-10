@@ -47,7 +47,7 @@ Also note that it might not be necessary to have all the libraries that you curr
 
 ## Paths Containing Non-ASCII Characters
 
-We currently do not know what happens with paths containing non-ASCII characters. We suspect that they might not work.
+We currently do not know what happens with paths containing non-ASCII characters. We suspect that they might not work. That should then be fixed.
 
 ## References
 
