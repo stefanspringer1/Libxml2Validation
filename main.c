@@ -156,9 +156,10 @@ int main(int argc, char **argv) {
         }
         setenv("XML_CATALOG_FILES", catalog, 1);
     }
-    else {
+    // out-commented: do _not_ unset because XML_CATALOG_FILES might be set from the outside:
+    /*else {
         unsetenv("XML_CATALOG_FILES");
-    }
+    }*/
 
     if (debug) {
         printf("[XML_DEBUG_CATALOG=%s]\n", getenv("XML_DEBUG_CATALOG"));
