@@ -99,6 +99,24 @@ int startsWith(const char *pre, const char *str)
     return lenstr < lenpre ? 0 : memcmp(pre, str, lenpre) == 0;
 }
 
+#if defined (_WIN32)
+int setenv(const char *name, const char *value, int overwrite)
+{
+    int errcode = 0;
+    if(!overwrite) {
+        size_t envsize = 0;
+        errcode = getenv_s(&envsize, NULL, 0, name);
+        if(errcode || envsize) return errcode;
+    }
+    return _putenv_s(name, value);
+}
+
+int unsetenv(const char *name)
+{
+    return setenv(name, "", 1);
+}
+#endif
+
 int main(int argc, char **argv) {
 
     char* doc = NULL;
@@ -141,7 +159,7 @@ int main(int argc, char **argv) {
             printf("catalog: [%s]\n", catalog);
             setenv("XML_DEBUG_CATALOG", "", 1);
         }
-        setenv("XML_CATALOG_FILES", catalog, 1);
+        std:setenv("XML_CATALOG_FILES", catalog, 1);
     }
     else {
         unsetenv("XML_CATALOG_FILES");
