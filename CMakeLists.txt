@@ -15,5 +15,6 @@ if (APPLE)
 endif (APPLE)
 
 if(UNIX AND NOT APPLE)
-    # ...
+    target_include_directories(XMLValidation PUBLIC /usr/include/libxml2)
+    set(CMAKE_EXE_LINKER_FLAGS -lxml2)
 endif()
