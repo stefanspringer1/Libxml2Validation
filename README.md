@@ -14,8 +14,9 @@ Note that newer `xmlReader` from is used here and not the SAX interface, since i
 
 The `CMakeLists.txt` contains some conditional statements according to the operating system used:
 
-- On macOS, libxml2 is already available, and you even do not need the headers files that come with this project. But the linker is to be called with `-lxml2`.
+- On macOS, libxml2 is already available, and you even do not need the headers files that come with this project. But you have to set the linker option `-lxml2`.
 - On Windows, you _do_ need the header files and, of course, the libraries.
+- On Linux, you have to have installed `libxml2-dev` (on Red Hat, you have to install `libxml2-devel`). You need to reference the header files in `/usr/include/libxml2` and (as on macOS) set the linker option `-lxml2`.
 
 ## The Resulting Program
 
