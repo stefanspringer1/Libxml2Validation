@@ -134,7 +134,7 @@ int main(int argc, char **argv) {
 
     if (doc == NULL) {
         fprintf(stderr, "no documment provided\n");
-        printf("usage: %1 <document> [-catalog=<catalog>] [-debug]\n", argv[0]);
+        printf("usage: %s <document> [-catalog=<catalog>] [-debug]\n", argv[0]);
         return (1);
     }
 
