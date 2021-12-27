@@ -18,6 +18,11 @@ The `CMakeLists.txt` contains some conditional statements according to the opera
 - On Windows, you _do_ need the header files and, of course, the libraries.
 - On Linux, you have to have installed `libxml2-dev` (on Red Hat, you have to install `libxml2-devel`). You need to reference the header files in `/usr/include/libxml2` and (as on macOS) set the linker option `-lxml2`.
 
+### Compilation on Windows
+
+`cmake -G "Visual Studio 16 2019" -A Win32 -S . -B "build32"`
+`cmake --build build32 --config Release`
+
 ## The Resulting Program
 
 The binaries for some platforms are added in the subdirectory `Binaries`.
@@ -38,6 +43,10 @@ arguments: `<document> [-catalog=<catalog>] [-debug]`
 `[ENCODING=<encoding>]`
 
 e.g. `[ENCODING=us-ascii]`. Errors are written to stderr.
+
+### Windows: Visual Studio Redistributables
+
+Add the DLLs from `Microsoft Visual Studio\...\VC\Redist\MSVC\...\x86\*.CRT` inside the Visual Studio Installation to the Binaries\Windows.Intel folder (currently those are concrt140.dll, msvcp140.dll, msvcp140_1.dll, msvcp140_2.dll, msvcp140_atomic_wait.dll, msvcp140_codecvt_ids.dll, vccorlib140.dll, and vcruntime140.dll). (Those files are meant to be redistributed.)
 
 ## On Referencing Catalog Files
 
