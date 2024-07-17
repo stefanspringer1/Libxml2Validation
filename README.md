@@ -20,8 +20,10 @@ The `CMakeLists.txt` contains some conditional statements according to the opera
 
 ### Compilation on Windows
 
-`cmake -G "Visual Studio 16 2019" -A Win32 -S . -B "build32"`
-`cmake --build build32 --config Release`
+```batch
+cmake -G "Visual Studio 16 2019" -A Win32 -S . -B "build32"
+cmake --build build32 --config Release
+```
 
 ## The Resulting Program
 
