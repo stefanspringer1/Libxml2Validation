@@ -1,5 +1,15 @@
 # Libxml2Validation
 
+---
+
+⚠️ **NOTE:**
+
+This repository is _deprecated;_ use the following, currently maintained repository instead:
+
+https://github.com/swiftxml/Libxml2Validation
+
+---
+
 ## About This Project
 
 This is a (very) little C project for the validation of XML documents using libxml2. The resulting executable is to executed from the command line, but the code can easily be adjusted for other use cases.
